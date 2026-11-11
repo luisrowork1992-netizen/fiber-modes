@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fiber-modes"
+version = "0.1.0"
+description = "LP modes and material dispersion of step-index optical fibres"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Luis Rodriguez" }]
+requires-python = ">=3.9"
+dependencies = ["numpy", "scipy"]
+
+[project.optional-dependencies]
+notebooks = ["matplotlib", "jupyter"]
+
+[tool.setuptools]
+packages = ["fibermodes"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
